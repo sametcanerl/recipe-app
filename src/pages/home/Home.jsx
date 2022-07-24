@@ -1,6 +1,6 @@
 import { HeaderText, HomeImg, ImgDiv } from './Home.style';
-import axios from 'axios';
-import { useContext, useState } from 'react';
+
+import { useContext } from 'react';
 import Header from '../../components/header/Header';
 import Cards from '../../components/cards/Cards';
 import homeSvg from '../../assets/home.svg';
@@ -8,7 +8,7 @@ import { AuthContext } from '../../context/AuthContext';
 
 const Home = () => {
  
-  const {setQuery,setSelectedMeal,recipes,mealType,getData} = useContext(AuthContext)
+  const {recipes} = useContext(AuthContext)
 
   // console.log(recipes);
   return (
