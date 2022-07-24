@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 import {
   HeaderContainer,
   MainHeader,
@@ -5,9 +7,11 @@ import {
   FoodInput,
   Button,
   Select,
-} from './Header.style';
+} from "./Header.style";
 
-const Header = ({ setQuery, setSelectedMeal, mealType, getData }) => {
+const Header = () => {
+  const { setQuery, setSelectedMeal, mealType, getData } =
+    useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     getData();
