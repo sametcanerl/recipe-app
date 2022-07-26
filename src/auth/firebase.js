@@ -2,13 +2,9 @@ import { initializeApp } from "firebase/app";
 import {
   createUserWithEmailAndPassword,
   getAuth,
-  GoogleAuthProvider,
   onAuthStateChanged,
-  sendPasswordResetEmail,
   signInWithEmailAndPassword,
-  signInWithPopup,
   signOut,
-  updateProfile,
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -44,23 +40,23 @@ export const SignIn = async (email, password, navigate) => {
       email,
       password
     );
-    navigate("/")
+    navigate("/");
     console.log(userCredential);
   } catch (error) {
     console.log(error);
   }
 };
 
-export const userObserver = (setCurrentUser)=>{
+export const userObserver = (setCurrentUser) => {
   onAuthStateChanged(auth, (user) => {
     if (user) {
-        setCurrentUser(user)
+      setCurrentUser(user);
     } else {
-     setCurrentUser(false)
+      setCurrentUser(false);
     }
   });
-}
+};
 
-export const logOut = ()=>{
-  signOut(auth)
-}
+export const logOut = () => {
+  signOut(auth);
+};
