@@ -1,3 +1,6 @@
+Bu projede edamam recipe api kullanılarak yemek tariflerini ve besin değerlerini göstermek amaçlanmaktadır. Arama özelliği ile arattığınız kelimeye ve seçtiğiniz öğüne ait yemekler ekrana bastırılmaktadır. Projede oturum açma ve yetkilendirme işlemleri için firebase-authentication kullanıldı. Oturum açmadan arattığınız kelimeye ait yemeklerin detaylarını göremezsiniz.Beceriler/Araçlar : Firebase, React-router, Axios, Styled-components
+## [Live Link](https://samet-recipe-app.netlify.app)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
